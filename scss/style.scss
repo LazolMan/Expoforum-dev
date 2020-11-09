@@ -1,0 +1,112 @@
+@import "_fonts.scss";
+@import "../plugins/reset.min.css";
+
+$maxWidth: 1120;
+
+$blue: #2378fc;
+$green: #30bcc9;
+$iceCream: #faf3e3;
+$yellow: #ffc41e;
+$red: #f6404f;
+
+@mixin Plumb-Medium {
+  font-family: "Plumb";
+  font-weight: 500;
+}
+@mixin Plumb-Bold {
+  font-family: "Plumb";
+  font-weight: 700;
+}
+@mixin Circle {
+  font-family: "Circle";
+  font-weight: 400;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $width: $maxWidth - 320;
+  $fnSize: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$width}));
+
+  font-size: $fnSize;
+
+  @media (min-width: #{$maxWidth + px}) {
+    font-size: $pcSize + px;
+  }
+}
+
+.wrapper {
+  max-width: $maxWidth + px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.heading {
+  @include Plumb-Medium();
+  @include adaptiv-font(30, 20);
+  color: white;
+}
+
+.title {
+  @include Plumb-Medium();
+  @include adaptiv-font(21, 11);
+  color: white;
+  line-height: 1.2;
+}
+
+.description {
+  @include Circle();
+  @include adaptiv-font(16, 8);
+  color: white;
+}
+
+.link {
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+
+  &::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: black;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.info-list {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    width: 21%;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+@import "_header.scss";
+@import "_about.scss";
+@import "_info.scss";
+@import "_events.scss";
+@import "_media.scss";
+@import "_footer.scss";

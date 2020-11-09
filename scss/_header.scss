@@ -1,0 +1,82 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 5px;
+  box-sizing: border-box;
+  z-index: 9;
+  background-color: rgba($color: #000000, $alpha: 0.25);
+
+  &__box {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    width: 55%;
+  }
+
+  &__lang {
+    color: white;
+    @include adaptiv-font(16, 14);
+    margin-left: 5px;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    width: 15%;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include Circle();
+    @include adaptiv-font(16, 14);
+    color: white;
+  }
+
+  &__link {
+    &::after {
+      background: white;
+    }
+  }
+}
+
+.search-form {
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+  margin-right: 25px;
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 0;
+    padding: 0;
+    transition: all 1s ease;
+    cursor: pointer;
+    color: #fff;
+
+    &:focus {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}

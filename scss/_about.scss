@@ -1,0 +1,86 @@
+.about {
+  background-image: url(../img/bg.jpg);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  &__text-box {
+    width: 40%;
+    align-self: center;
+  }
+
+  &__content {
+    min-width: 40%;
+    max-width: 50%;
+    align-self: flex-end;
+  }
+}
+
+.about-box {
+  &__title {
+    @include Plumb-Bold();
+    @include adaptiv-font(64, 32);
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    @include Circle();
+    @include adaptiv-font(24, 12);
+    color: white;
+    margin-bottom: 25px;
+
+    transition: 0.3s all ease-in-out;
+  }
+
+  &__link {
+    &::after {
+      background: white;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+  &__item {
+    width: 47%;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    margin: 15px 0;
+
+    &:nth-child(1n) {
+      background-color: $blue;
+    }
+    &:nth-child(2n) {
+      background-color: $green;
+    }
+    &:nth-child(3n) {
+      background-color: $yellow;
+    }
+    &:nth-child(4n) {
+      background-color: $red;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    &::after {
+      background: white;
+    }
+  }
+}

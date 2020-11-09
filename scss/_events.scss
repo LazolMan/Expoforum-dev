@@ -1,0 +1,58 @@
+.events {
+  background-color: $yellow;
+  padding: 75px 0;
+
+  &__top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  &__title {
+    color: black;
+  }
+
+  &__link {
+    color: black;
+  }
+}
+
+.events-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 30%;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    @include Circle();
+    @include adaptiv-font(14, 7);
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    display: inline-block;
+    color: $red;
+    margin-bottom: 10px;
+    transition: 0.3s all ease-in-out;
+
+    &:hover{
+      color: #fff;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  &__description {
+    color: black;
+  }
+}

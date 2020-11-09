@@ -1,0 +1,50 @@
+.footer {
+  background-color: $green;
+  padding-top: 60px;
+
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    @include adaptiv-font(14, 7);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  &__email {
+    @include Circle();
+    @include adaptiv-font(12, 6);
+    color: #9c9c9c;
+    width: 80%;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  &__submit {
+    background-color: $red;
+    padding: 10px;
+    display: flex;
+  }
+
+  &__social {
+    &:hover {
+      padding-bottom: 5px;
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      color: rgba($color: #fff, $alpha: 0.6);
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}

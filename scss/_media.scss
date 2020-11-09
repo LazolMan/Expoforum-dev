@@ -1,0 +1,73 @@
+.media {
+  background-color: $iceCream;
+  padding: 75px 0;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__advertising {
+    width: 40%;
+  }
+
+  &__news {
+    width: 50%;
+  }
+}
+
+.advertising {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.news {
+  &__top-line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    color: black;
+  }
+
+  &__link {
+    color: black;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  &__box {
+    width: 30%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    width: 65%;
+  }
+
+  &__date {
+    color: $red;
+    margin: 15px 0;
+  }
+
+  &__title {
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
