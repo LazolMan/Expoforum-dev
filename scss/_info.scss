@@ -1,4 +1,8 @@
 .info {
   background-color: $blue;
   padding: 75px 0;
+
+  @media (max-width: 375px) {
+    padding: 25px 0;
+  }
 }

@@ -48,14 +48,14 @@ $red: #f6404f;
 
 .title {
   @include Plumb-Medium();
-  @include adaptiv-font(21, 11);
+  @include adaptiv-font(21, 14);
   color: white;
   line-height: 1.2;
 }
 
 .description {
   @include Circle();
-  @include adaptiv-font(16, 8);
+  @include adaptiv-font(16, 14);
   color: white;
 }
 
@@ -87,6 +87,14 @@ $red: #f6404f;
   &__content {
     width: 21%;
     margin-bottom: 40px;
+
+    @media (max-width: 480px) {
+      width: 49%;
+    }
+
+    @media (max-width: 375px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__title {

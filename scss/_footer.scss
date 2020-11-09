@@ -2,13 +2,18 @@
   background-color: $green;
   padding-top: 60px;
 
+  @media (max-width: 375px) {
+    padding: 25px 0;
+  }
+
   &__social-list {
     display: flex;
     justify-content: space-between;
   }
 
   &__link {
-    @include adaptiv-font(14, 7);
+    @include adaptiv-font(14, 14);
+    line-height: 1.1;
   }
 
   &__form {
@@ -19,11 +24,11 @@
 
   &__email {
     @include Circle();
-    @include adaptiv-font(12, 6);
+    @include adaptiv-font(12, 9);
     color: #9c9c9c;
     width: 80%;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 
   &__submit {
@@ -46,5 +51,10 @@
       color: rgba($color: #fff, $alpha: 0.6);
       transition: 0.3s all ease-in-out;
     }
+  }
+
+  &__shop-link{
+    width: 80%;
+    height: auto;
   }
 }
